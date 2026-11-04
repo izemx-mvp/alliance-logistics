@@ -83,7 +83,7 @@ export function HoverLift({
   return (
     <motion.div
       className={cn("transition-shadow", className)}
-      whileHover={reduced ? undefined : { y: -6 }}
+      {...(reduced ? {} : { whileHover: { y: -6 } })}
       transition={{ duration: 0.25, ease: "easeOut" }}
     >
       {children}
