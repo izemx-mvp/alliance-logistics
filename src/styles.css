@@ -78,6 +78,8 @@
   /* Brand extras */
   --grey: oklch(0.616 0 0); /* logo grey #8E8E8E — decorative/secondary */
   --grey-soft: oklch(0.88 0 0);
+  --whatsapp: oklch(0.7 0.15 156); /* WhatsApp brand green (floating button) */
+  --whatsapp-foreground: oklch(1 0 0);
   --charcoal: oklch(0.263 0 0); /* #2B2B2B — dark sections */
   --charcoal-foreground: oklch(0.97 0 0);
 }
