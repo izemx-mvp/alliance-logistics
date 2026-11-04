@@ -272,7 +272,7 @@ export const services: Service[] = [
       },
       {
         title: "Recouvrement & imputation",
-        text: "Gestion des frais etSurestaries dans les règles de l'art.",
+        text: "Gestion des frais de surestaries et imputation dans les règles de l'art.",
       },
       {
         title: "Reporting armateur",
