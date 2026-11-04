@@ -44,6 +44,8 @@
   /* Brand extras */
   --color-grey: var(--grey);
   --color-grey-soft: var(--grey-soft);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
   --color-charcoal: var(--charcoal);
   --color-charcoal-foreground: var(--charcoal-foreground);
   --font-sans: var(--font-sans);
