@@ -1,39 +1,74 @@
 /**
  * The 6 services offered by Alliance Logistics.
- * Drives /services and /services/:slug. All copy is editable here.
+ * Drives /services and /services/:slug. French copy is editable here;
+ * English copy lives in services.en.ts (same structure, keyed by slug).
  */
+import type { ImageKey } from "@/lib/images";
+import type { Lang } from "@/i18n";
+import { servicesEn } from "./services.en";
 
 export type ServiceFaq = { question: string; answer: string };
 export type ServiceCapability = { title: string; text: string };
 export type ServiceStep = { title: string; text: string };
 
-export type Service = {
-  slug: string;
+/** Translatable part of a service. */
+export type ServiceText = {
   title: string;
   short: string;
-  icon: ServiceIconKey;
   intro: string;
   capabilities: ServiceCapability[];
   steps: ServiceStep[];
   faq: ServiceFaq[];
+  chips: string[];
+};
+
+export type Service = ServiceText & {
+  slug: ServiceSlug;
+  icon: ServiceIconKey;
+  /** Hero image (key of src/lib/images.ts). */
+  image: ImageKey;
+  /** Slugs of complementary services shown at the bottom of the page. */
+  related: ServiceSlug[];
   ctaPrefill: { service: string; mode?: string };
 };
 
+export type ServiceSlug =
+  | "transport-international"
+  | "agence-en-douane"
+  | "transport-national-entreposage"
+  | "agence-maritime"
+  | "transport-frigorifique"
+  | "transport-exceptionnel";
+
+export const SERVICE_SLUGS = [
+  "transport-international",
+  "agence-en-douane",
+  "transport-national-entreposage",
+  "agence-maritime",
+  "transport-frigorifique",
+  "transport-exceptionnel",
+] as const satisfies readonly ServiceSlug[];
+
 export type ServiceIconKey =
-  | "ship"
-  | "plane"
-  | "truck"
-  | "warehouse"
-  | "reefer"
-  | "oversize";
+  "globe" | "customs" | "ship" | "plane" | "truck" | "warehouse" | "reefer" | "oversize";
 
 export const services: Service[] = [
   {
     slug: "transport-international",
     title: "Transport international",
-    short:
-      "Import & export multimodal — maritime, aérien et routier — organisé porte à porte.",
-    icon: "ship",
+    short: "Import & export multimodal — maritime, aérien et routier — organisé porte à porte.",
+    icon: "globe",
+    image: "serviceInternational",
+    related: ["agence-en-douane", "transport-frigorifique", "agence-maritime"],
+    chips: [
+      "FCL",
+      "LCL / groupage",
+      "Fret aérien",
+      "Routier international",
+      "IMDG / IATA-DGR",
+      "Porte à porte",
+      "Multimodal",
+    ],
     intro:
       "Nous organisons vos flux import et export de bout en bout : choix de l'itinéraire, réservation, enlèvement, expédition, dédouanement et livraison finale. Un seul interlocuteur pilote votre dossier, quelle que soit la combinaison de modes retenue.",
     capabilities: [
@@ -108,7 +143,18 @@ export const services: Service[] = [
     title: "Agence en douane",
     short:
       "Dédouanement import & export : déclarations, régimes douaniers et conseil réglementaire.",
-    icon: "truck",
+    icon: "customs",
+    image: "serviceDouane",
+    related: ["transport-international", "transport-national-entreposage", "agence-maritime"],
+    chips: [
+      "DUM",
+      "BADR",
+      "Régimes économiques",
+      "Admission temporaire",
+      "Origine préférentielle",
+      "Nomenclature",
+      "Bon à enlever",
+    ],
     intro:
       "Notre agence en douane intégrée est le cœur de notre métier depuis 45 ans. Nous établissons vos déclarations en douane import et export, sécurisons vos régimes et vous conseillons sur la nomenclature tarifaire et les règles d'origine.",
     capabilities: [
@@ -177,9 +223,18 @@ export const services: Service[] = [
   {
     slug: "transport-national-entreposage",
     title: "Transport national & entreposage",
-    short:
-      "Distribution sur tout le Maroc avec des moyens propres, et entreposage sécurisé.",
+    short: "Distribution sur tout le Maroc avec des moyens propres, et entreposage sécurisé.",
     icon: "warehouse",
+    image: "serviceEntreposage",
+    related: ["agence-en-douane", "transport-frigorifique", "transport-exceptionnel"],
+    chips: [
+      "Distribution Maroc",
+      "Moyens propres",
+      "Stockage",
+      "Gestion de stock",
+      "Picking",
+      "Preuve de livraison",
+    ],
     intro:
       "Nous livrons vos marchandises sur l'ensemble du territoire marocain avec nos moyens propres de transport, et mettons à votre disposition des espaces d'entreposage flexibles, de la palette au lot complet.",
     capabilities: [
@@ -248,11 +303,20 @@ export const services: Service[] = [
   {
     slug: "agence-maritime",
     title: "Agence maritime",
-    short:
-      "Consignation et représentation d'armateurs : escales, documentation et coordonnations.",
+    short: "Consignation et représentation d'armateurs : escales, documentation et coordination.",
     icon: "ship",
+    image: "serviceMaritime",
+    related: ["transport-international", "agence-en-douane", "transport-exceptionnel"],
+    chips: [
+      "Consignation",
+      "Escale",
+      "Connaissement (B/L)",
+      "Manifeste",
+      "Port de Casablanca",
+      "Armateurs",
+    ],
     intro:
-      "Nous représentons des armataires et armateurs à Casablanca : nous coordonnons les escales, gérons la documentation maritime et servons d'interface entre le navire, la douane et les chargeurs.",
+      "Nous représentons des armateurs à Casablanca : nous coordonnons les escales, gérons la documentation maritime et assurons l'interface entre le navire, la douane et les chargeurs.",
     capabilities: [
       {
         title: "Consignation",
@@ -272,7 +336,7 @@ export const services: Service[] = [
       },
       {
         title: "Recouvrement & imputation",
-        text: "Gestion des frais de surestaries et imputation dans les règles de l'art.",
+        text: "Suivi des frais d'escale et de surestaries, et refacturation aux parties concernées.",
       },
       {
         title: "Reporting armateur",
@@ -311,7 +375,7 @@ export const services: Service[] = [
       {
         question: "Travaillez-vous pour des armateurs étrangers ?",
         answer:
-          "Oui, la consignation consiste précisément à représenter des armateurs et armataires auprès des autorités et des clients locaux.",
+          "Oui, la consignation consiste précisément à représenter des armateurs auprès des autorités et des clients locaux.",
       },
     ],
     ctaPrefill: { service: "agence-maritime" },
@@ -322,6 +386,16 @@ export const services: Service[] = [
     short:
       "Chaîne du froid maîtrisée, maritime, aérienne et routière, pour produits sensibles et pharma.",
     icon: "reefer",
+    image: "serviceFrigorifique",
+    related: ["transport-international", "agence-en-douane", "transport-national-entreposage"],
+    chips: [
+      "Reefer",
+      "Chaîne du froid",
+      "Produits frais",
+      "Pharmaceutique",
+      "Relevés de température",
+      "Aérien 24h/24",
+    ],
     intro:
       "Produits alimentaires, pharmaceutiques ou matières premières sensibles : nous maintenons la chaîne du froid sur toute la durée du transport, avec des conteneurs et véhicules frigorifiques contrôlés en continu.",
     capabilities: [
@@ -331,7 +405,7 @@ export const services: Service[] = [
       },
       {
         title: "Aérien frigorifique 24h/24",
-        text: "Solution aérienne enceinte chauffée/froid disponible en continu.",
+        text: "Fret aérien sous température dirigée, disponible 24h/24.",
       },
       {
         title: "Routier frigorifique",
@@ -339,7 +413,7 @@ export const services: Service[] = [
       },
       {
         title: "Produits pharmaceutiques",
-        text: "Transport qualifié, documents sanitaires et respect des GDP.",
+        text: "Transport qualifié, documents sanitaires et respect des bonnes pratiques de distribution (BPD/GDP).",
       },
       {
         title: "Contrôles & traçabilité",
@@ -390,9 +464,18 @@ export const services: Service[] = [
   {
     slug: "transport-exceptionnel",
     title: "Transport exceptionnel",
-    short:
-      "Convois hors gabarit et chargements spéciaux : études, autorisations et pilotage.",
+    short: "Convois hors gabarit et chargements spéciaux : études, autorisations et pilotage.",
     icon: "oversize",
+    image: "serviceExceptionnel",
+    related: ["transport-international", "agence-maritime", "transport-national-entreposage"],
+    chips: [
+      "Hors gabarit",
+      "Convoi exceptionnel",
+      "Flat rack",
+      "Autorisations",
+      "Escorte",
+      "Cargaisons projets",
+    ],
     intro:
       "Machines industrielles, équipements de chantier, transformateurs ou structures volumineuses : nous organisons les transports de hors gabarit, de l'étude de faisabilité jusqu'à la mise en place sur site.",
     capabilities: [
@@ -409,8 +492,8 @@ export const services: Service[] = [
         text: "Remorques surdimensionnées, flat rack et plateformes selon le chargement.",
       },
       {
-        title: "Lestage & arrimage",
-        text: "Plans d'arrimage, de levage et de sécurisation certifiés.",
+        title: "Calage & arrimage",
+        text: "Plans d'arrimage, de levage et de sécurisation adaptés à chaque chargement.",
       },
       {
         title: "Pilotage & escortes",
@@ -460,6 +543,21 @@ export const services: Service[] = [
   },
 ];
 
-export function getService(slug: string): Service | undefined {
-  return services.find((s) => s.slug === slug);
+export function isServiceSlug(value: unknown): value is ServiceSlug {
+  return typeof value === "string" && SERVICE_SLUGS.some((slug) => slug === value);
+}
+
+/** Service with its text in the requested language. */
+export function localizeService(service: Service, lang: Lang): Service {
+  if (lang === "fr") return service;
+  return { ...service, ...servicesEn[service.slug] };
+}
+
+export function getServices(lang: Lang): Service[] {
+  return services.map((s) => localizeService(s, lang));
+}
+
+export function getService(slug: string, lang: Lang = "fr"): Service | undefined {
+  const service = services.find((s) => s.slug === slug);
+  return service ? localizeService(service, lang) : undefined;
 }

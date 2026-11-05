@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Static sitemap. Keep in sync with src/data/services.ts and src/data/posts.ts (checked by src/test/sitemap.test.ts). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alliancebennani.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/a-propos?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/a-propos"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/a-propos?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/a-propos?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/a-propos"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-international</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-international?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-international"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-international?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-international?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-international"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/agence-en-douane</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/agence-en-douane"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/agence-en-douane?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/agence-en-douane"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/agence-en-douane?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/agence-en-douane"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/agence-en-douane?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/agence-en-douane"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-national-entreposage</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-national-entreposage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-national-entreposage?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-national-entreposage"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-national-entreposage?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-national-entreposage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-national-entreposage?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-national-entreposage"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/agence-maritime</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/agence-maritime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/agence-maritime?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/agence-maritime"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/agence-maritime?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/agence-maritime"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/agence-maritime?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/agence-maritime"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-frigorifique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-frigorifique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-frigorifique?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-frigorifique"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-frigorifique?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-frigorifique"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-frigorifique?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-frigorifique"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-exceptionnel</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-exceptionnel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-exceptionnel?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-exceptionnel"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/services/transport-exceptionnel?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/services/transport-exceptionnel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/services/transport-exceptionnel?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/services/transport-exceptionnel"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/reseau</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/reseau"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/reseau?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/reseau"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/reseau?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/reseau"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/reseau?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/reseau"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/cotation</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/cotation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/cotation?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/cotation"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/cotation?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/cotation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/cotation?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/cotation"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/suivi</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/suivi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/suivi?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/suivi"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/suivi?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/suivi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/suivi?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/suivi"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/incoterms-2020-bien-choisir</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/incoterms-2020-bien-choisir?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/incoterms-2020-bien-choisir"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/dedouanement-maroc-etapes-cles"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/conteneur-reefer-chaine-du-froid"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/groupage-maritime-lcl</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/groupage-maritime-lcl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/groupage-maritime-lcl?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/groupage-maritime-lcl"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/actualites/groupage-maritime-lcl?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/actualites/groupage-maritime-lcl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/actualites/groupage-maritime-lcl?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/actualites/groupage-maritime-lcl"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/contact?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/contact"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/contact?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/contact?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/contact"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/mentions-legales?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/mentions-legales"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/mentions-legales?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/mentions-legales?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/mentions-legales"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/politique-de-confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/politique-de-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/politique-de-confidentialite?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/politique-de-confidentialite"/>
+  </url>
+  <url>
+    <loc>https://alliancebennani.com/politique-de-confidentialite?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alliancebennani.com/politique-de-confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alliancebennani.com/politique-de-confidentialite?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alliancebennani.com/politique-de-confidentialite"/>
+  </url>
+</urlset>

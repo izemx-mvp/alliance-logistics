@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { ServiceIconKey } from "@/data/services";
 import { cn } from "@/lib/utils";
 
@@ -5,7 +6,26 @@ import { cn } from "@/lib/utils";
  * Custom line-art SVG illustrations for the six services.
  * Stroke inherits currentColor; a red accent detail uses --color-primary.
  */
-const icons: Record<ServiceIconKey, React.ReactNode> = {
+const icons: Record<ServiceIconKey, ReactNode> = {
+  globe: (
+    <>
+      <circle cx="32" cy="32" r="22" />
+      <path d="M10 32h44M32 10c-7 7-7 37 0 44M32 10c7 7 7 37 0 44" />
+      {/* route arc leaving the globe */}
+      <path d="M18 46c10-20 26-26 40-24" className="stroke-primary" />
+      <circle cx="58" cy="22" r="2.5" className="stroke-primary" />
+    </>
+  ),
+  customs: (
+    <>
+      {/* document */}
+      <path d="M16 8h22l10 10v30H16z" />
+      <path d="M38 8v10h10" />
+      <path d="M22 26h18M22 33h18M22 40h10" />
+      {/* stamp */}
+      <path d="M40 46h16v8H40zM44 46v-6a4 4 0 0 1 8 0v6" className="stroke-primary" />
+    </>
+  ),
   ship: (
     <>
       {/* containers stacked on hull */}
@@ -76,13 +96,7 @@ const icons: Record<ServiceIconKey, React.ReactNode> = {
   ),
 };
 
-export function ServiceIcon({
-  icon,
-  className,
-}: {
-  icon: ServiceIconKey;
-  className?: string;
-}) {
+export function ServiceIcon({ icon, className }: { icon: ServiceIconKey; className?: string }) {
   return (
     <svg
       viewBox="0 0 64 64"

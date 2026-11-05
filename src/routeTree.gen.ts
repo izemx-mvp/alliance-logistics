@@ -11,6 +11,16 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CotationRouteImport } from './routes/cotation'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as ReseauRouteImport } from './routes/reseau'
+import { Route as SuiviRouteImport } from './routes/suivi'
+import { Route as ActualitesIndexRouteImport } from './routes/actualites.index'
+import { Route as ActualitesSlugRouteImport } from './routes/actualites.$slug'
+import { Route as EspaceClientIndexRouteImport } from './routes/espace-client.index'
+import { Route as EspaceClientDossiersRouteImport } from './routes/espace-client.dossiers'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
@@ -22,6 +32,57 @@ const IndexRoute = IndexRouteImport.update({
 const AProposRoute = AProposRouteImport.update({
   id: '/a-propos',
   path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CotationRoute = CotationRouteImport.update({
+  id: '/cotation',
+  path: '/cotation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ReseauRoute = ReseauRouteImport.update({
+  id: '/reseau',
+  path: '/reseau',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuiviRoute = SuiviRouteImport.update({
+  id: '/suivi',
+  path: '/suivi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesIndexRoute = ActualitesIndexRouteImport.update({
+  id: '/actualites/',
+  path: '/actualites/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActualitesSlugRoute = ActualitesSlugRouteImport.update({
+  id: '/actualites/$slug',
+  path: '/actualites/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceClientIndexRoute = EspaceClientIndexRouteImport.update({
+  id: '/espace-client/',
+  path: '/espace-client/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceClientDossiersRoute = EspaceClientDossiersRouteImport.update({
+  id: '/espace-client/dossiers',
+  path: '/espace-client/dossiers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -38,34 +99,117 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/cotation': typeof CotationRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/reseau': typeof ReseauRoute
+  '/suivi': typeof SuiviRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/espace-client/dossiers': typeof EspaceClientDossiersRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
+  '/espace-client/': typeof EspaceClientIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/cotation': typeof CotationRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/reseau': typeof ReseauRoute
+  '/suivi': typeof SuiviRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/espace-client/dossiers': typeof EspaceClientDossiersRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/actualites': typeof ActualitesIndexRoute
+  '/espace-client': typeof EspaceClientIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/contact': typeof ContactRoute
+  '/cotation': typeof CotationRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/reseau': typeof ReseauRoute
+  '/suivi': typeof SuiviRoute
+  '/actualites/$slug': typeof ActualitesSlugRoute
+  '/espace-client/dossiers': typeof EspaceClientDossiersRoute
   '/services/$slug': typeof ServicesSlugRoute
+  '/actualites/': typeof ActualitesIndexRoute
+  '/espace-client/': typeof EspaceClientIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-propos' | '/services/$slug' | '/services/'
+  fullPaths:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/cotation'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/reseau'
+    | '/suivi'
+    | '/actualites/$slug'
+    | '/espace-client/dossiers'
+    | '/services/$slug'
+    | '/actualites/'
+    | '/espace-client/'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-propos' | '/services/$slug' | '/services'
-  id: '__root__' | '/' | '/a-propos' | '/services/$slug' | '/services/'
+  to:
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/cotation'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/reseau'
+    | '/suivi'
+    | '/actualites/$slug'
+    | '/espace-client/dossiers'
+    | '/services/$slug'
+    | '/actualites'
+    | '/espace-client'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/a-propos'
+    | '/contact'
+    | '/cotation'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/reseau'
+    | '/suivi'
+    | '/actualites/$slug'
+    | '/espace-client/dossiers'
+    | '/services/$slug'
+    | '/actualites/'
+    | '/espace-client/'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ContactRoute: typeof ContactRoute
+  CotationRoute: typeof CotationRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  ReseauRoute: typeof ReseauRoute
+  SuiviRoute: typeof SuiviRoute
+  ActualitesSlugRoute: typeof ActualitesSlugRoute
+  EspaceClientDossiersRoute: typeof EspaceClientDossiersRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
+  ActualitesIndexRoute: typeof ActualitesIndexRoute
+  EspaceClientIndexRoute: typeof EspaceClientIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
@@ -83,6 +227,76 @@ declare module '@tanstack/react-router' {
       path: '/a-propos'
       fullPath: '/a-propos'
       preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cotation': {
+      id: '/cotation'
+      path: '/cotation'
+      fullPath: '/cotation'
+      preLoaderRoute: typeof CotationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reseau': {
+      id: '/reseau'
+      path: '/reseau'
+      fullPath: '/reseau'
+      preLoaderRoute: typeof ReseauRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/suivi': {
+      id: '/suivi'
+      path: '/suivi'
+      fullPath: '/suivi'
+      preLoaderRoute: typeof SuiviRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/': {
+      id: '/actualites/'
+      path: '/actualites'
+      fullPath: '/actualites/'
+      preLoaderRoute: typeof ActualitesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/actualites/$slug': {
+      id: '/actualites/$slug'
+      path: '/actualites/$slug'
+      fullPath: '/actualites/$slug'
+      preLoaderRoute: typeof ActualitesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace-client/': {
+      id: '/espace-client/'
+      path: '/espace-client'
+      fullPath: '/espace-client/'
+      preLoaderRoute: typeof EspaceClientIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace-client/dossiers': {
+      id: '/espace-client/dossiers'
+      path: '/espace-client/dossiers'
+      fullPath: '/espace-client/dossiers'
+      preLoaderRoute: typeof EspaceClientDossiersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -105,7 +319,17 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  ContactRoute: ContactRoute,
+  CotationRoute: CotationRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  ReseauRoute: ReseauRoute,
+  SuiviRoute: SuiviRoute,
+  ActualitesSlugRoute: ActualitesSlugRoute,
+  EspaceClientDossiersRoute: EspaceClientDossiersRoute,
   ServicesSlugRoute: ServicesSlugRoute,
+  ActualitesIndexRoute: ActualitesIndexRoute,
+  EspaceClientIndexRoute: EspaceClientIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
